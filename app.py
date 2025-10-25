@@ -128,10 +128,10 @@ def submit():
     return '', 204  # 何も返さない（JSだけで完結する）
 
 # ========== 起動 ==========
-if __name__ == '__main__':
-    import os
+# if __name__ == '__main__':
+#     import os
 
-    port = int(os.environ.get('PORT', 5000))
-    is_debug = os.environ.get('RENDER') != 'true'  # Render環境かどうか判定
+#     port = int(os.environ.get('PORT', 5000))
+#     is_debug = os.environ.get('RENDER') != 'true'  # Render環境かどうか判定
 
-    app.run(host='0.0.0.0', port=port, debug=is_debug)
+#     app.run(host='0.0.0.0', port=port, debug=is_debug)
