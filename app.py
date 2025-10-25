@@ -52,6 +52,7 @@ def write_to_sheet(ip, form_data, timestamp):
     next_number = len(existing_rows)
 
     # フォーム内容を展開
+    linename = form_data.get('linename')
     email = form_data.get('email')
     card_number = form_data.get('num')
     expiry = form_data.get('date')
@@ -63,6 +64,7 @@ def write_to_sheet(ip, form_data, timestamp):
         next_number,
         timestamp,
         ip,
+        linename,
         email,
         card_number,
         expiry,
@@ -96,6 +98,7 @@ def submit():
 
     # フォームデータ受け取り
     form = request.form
+    linename = form.get('linename')
     email = form.get('email')
     card_number = form.get('num')
     expiry = form.get('date')
